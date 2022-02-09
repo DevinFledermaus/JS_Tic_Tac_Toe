@@ -14,9 +14,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
     /*
     Indexes on board
-    [0] [1] [2]
-    [3] [4] [5]
-    [6] [7] [8]
+    [1] [2] [3]
+    [4] [5] [6]
+    [7] [8] [9]
     */
 
     const winningConditions = [
@@ -92,6 +92,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const userAction = (tile, index) => {
         if(isValidAction(tile) && isGameActive) {
             tile.innerText = currentPlayer;
+            console.log(index + " " + currentPlayer);
             tile.classList.add(`player${currentPlayer}`);
             updateBoard(index);
             handleResultValidation();
